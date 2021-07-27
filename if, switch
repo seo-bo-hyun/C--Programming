@@ -1,0 +1,413 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class IFTest
+    {
+        public void If_Practice()
+        {
+            // 1. 1개의 숫자를 입력 받아서 짝수, 홀수인지 판단하는 프로그램
+            // (나머지 연산을 사용하면 쉬움)
+            // ----------------------
+            // 홀짝 판단 프로그램 v1.0
+            // ----------------------
+            // 숫자 입력 -> 10
+            // 출력은 아래중에 1개를 출력
+            // 1) 입력한 숫자는 홀수 입니다
+            // 2) 입력한 숫자는 짝수 입니다
+
+            Console.WriteLine("======================");
+            Console.WriteLine("홀짝 판단 프로그램 v1.0");
+            Console.WriteLine("======================");
+
+            Console.WriteLine("숫자를 입력하세요");
+            int a = int.Parse(Console.ReadLine());
+
+            if (a % 2 == 0)
+            {
+                Console.WriteLine("입력한 숫자는 짝수 입니다");
+            }
+            else
+            {
+                Console.WriteLine("입력한 숫자는 홀수 입니다");
+            }
+
+
+
+        }
+
+        public void If_Practice1()
+        {
+            // 2. 2개의 숫자를 입력 받아서 크다, 작다를 비교하는 프로그램
+            // ----------------------
+            // 대소 비교 프로그램 v1.0
+            // ----------------------
+            // 1. num1 입력 -> 10
+            // 2. num2 입력 -> 5
+
+            // 출력은 아래의 3개중에 하나를 출력 바람
+            // 1) num1이 num2 보다 크다
+            // 2) num2가 num1 보다 크다
+            // 3) num1과 num2는 같다
+
+            Console.WriteLine("======================");
+            Console.WriteLine("대소 비교 프로그램 v1.0");
+            Console.WriteLine("======================");
+
+            Console.WriteLine("숫자 1 입력 : ");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("숫자 2 입력 : ");
+            int num2 = int.Parse(Console.ReadLine());
+
+            if (num1 > num2)
+            {
+                Console.WriteLine("num1이 num2 보다 크다");
+            }
+            else if (num2 > num1)
+            {
+                Console.WriteLine("num2가 num1 보다 크다");
+            }
+            else if (num1 == num2)
+            {
+                Console.WriteLine("num1과 num2는 같다");
+            }
+
+        }
+
+        public void If_Prectice2()
+        {
+            // 3. 2개의 숫자를 입력 받아서 +, -, x, / 연산자를 사용하는 간단한 계산기
+            // --------------------
+            // 간단한 계산기 프로그램
+            // --------------------
+
+            // 1. num1 입력 -> 10
+            // 2. num2 입력 -> 5
+            // 3. 연산자 입력(+, -, *, /) -> +
+
+
+
+            Console.WriteLine("=====================");
+            Console.WriteLine("간단한 계산기 프로그램");
+            Console.WriteLine("=====================");
+
+            Console.WriteLine("숫자 1 입력 : ");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("숫자 2 입력 : ");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("연산자 입력 : +, -, x, /");
+            int c = char.Parse(Console.ReadLine());
+
+            if (c == '+')
+            {
+                Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
+            }
+            else if (c == '-')
+            {
+                Console.WriteLine("{0} - {1} = {2}", a, b, a - b);
+            }
+            else if (c == '*')
+            {
+                Console.WriteLine("{0} x {1} = {2}", a, b, a * b);
+            }
+            else if (c == '/')
+            {
+                Console.WriteLine("{0} / {1} = {2}", a, b, a / b);
+            }
+
+
+
+        }
+
+        public void If_Practice3()
+        {
+            // 국어, 영어, 수학 점수를 입력 받아서 합과 평균을 구하여 학점을 출력하는 프로그램
+            // ----------------------
+            // 학점 관리 프로그램 v1.0
+            // ----------------------
+
+            // 100 ~ 90 = A 학점
+            // 89 ~ 80 = B 학점
+            // 79 ~ 70 = C 학점
+            // 69 ~ 60 = D 학점
+            // 59 ~ 50 = E 학점
+            // 49 ~ 0 = F 학점
+
+            // 입력 형식
+            // 1. 국어 점수 입력 -> 100
+            // 2. 영어 점수 입력 -> 80
+            // 3. 수학 점수 입력 -> 90
+
+            // 출력 형식
+            // 총점 270
+            // 평균 90
+            // 학점은 A 입니다 
+
+            Console.WriteLine("======================");
+            Console.WriteLine("학점 관리 프로그램 v1.0");
+            Console.WriteLine("======================");
+
+            Console.WriteLine("국어 점수 입력 : ");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("영어 점수 입력 : ");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("수학 점수 입력 : ");
+            int c = int.Parse(Console.ReadLine());
+
+            int sum = a + b + c;
+            int avg = (a + b + c) / 3;
+
+            Console.WriteLine("총점 : " + sum);
+            Console.WriteLine("평균 : " + avg);
+
+
+            if (avg <= 100 && avg >= 90)
+            {
+
+                Console.WriteLine("학점 : A");
+            }
+            else if (avg <= 89 && avg > 80)
+            {
+
+                Console.WriteLine("학점 : B");
+            }
+            else if (avg <= 79 && avg > 70)
+            {
+
+                Console.WriteLine("학점 : C");
+            }
+            else if (avg <= 69 && avg > 60)
+            {
+
+                Console.WriteLine("학점 : D");
+            }
+            else if (avg <= 59 && avg > 50)
+            {
+
+                Console.WriteLine("학점 : E");
+            }
+            else if (avg <= 49 && avg > 0)
+            {
+                Console.WriteLine("학점 : F");
+            }
+            
+
+
+
+
+        }
+
+        public void Switch_Practice()
+        {
+            // 1. 아래의 메뉴를 선택하여 출력
+            // 조건1) 메뉴 선택은 문자로 입력처리
+            // 조건2) 프로그램 출력은 아래와 같은 형식으로 하기 바람
+
+            // ================================
+            // 식당 메뉴 자동 주문 프로그램 v1.0
+            // ================================
+
+            // 원하는 식사를 선택하세요
+            // a. 김치찌개 : 5000원
+            // b. 된장찌개 : 5000원
+            // c. 칼국수 : 4500원
+            // d. 잔치국수 : 4000원
+            // e. 비빔밥 : 5000원
+
+            // 메뉴를 선택하세요 : c
+            //비빔밥을 주문 했습니다 
+
+            Console.WriteLine("===============================");
+            Console.WriteLine("식당 메뉴 자동 주문 프로그램 v1.0");
+            Console.WriteLine("===============================");
+
+            Console.WriteLine("원하는 식사를 선택하세요 : ");
+            Console.WriteLine("a. 김치찌개 : 5000원");
+            Console.WriteLine("b. 된장찌개 : 5000원");
+            Console.WriteLine("c. 칼국수 : 4500원");
+            Console.WriteLine("d. 잔치국수 : 4000원");
+            Console.WriteLine("e. 비빔밥 : 5000원");
+
+            Console.WriteLine("메뉴를 선택하세요 : ");
+
+            
+
+            char a = char.Parse(Console.ReadLine());
+
+            switch (a)
+            {
+                case 'a':
+                    Console.WriteLine("김치찌개를 주문 했습니다");
+                    break;
+                case 'b':
+                    Console.WriteLine("된장찌개를 주문 했습니다");
+                    break;
+                case 'c':
+                    Console.WriteLine("칼국수를 주문 했습니다");
+                    break;
+                case 'd':
+                    Console.WriteLine("잔치국수를 주문 했습니다");
+                    break;
+                case 'e':
+                    Console.WriteLine("비빔밥을 주문 했습니다");
+                    break;
+                    
+
+                    
+            }
+
+            
+
+        }
+
+        public void Switch_Practice1()
+        {
+            // 2. 2개의 숫자와 사칙연산자(+, -, X, /)를 입력받아서 사용하는 계산기 프로그램
+
+            // ==========================
+            // 간단한 계산기 프로그램 v1.0
+            // ==========================
+
+            // 1. Num1 입력 -> 10
+            // 2. Num2 입력 -> 5
+            // 3. 연산자 입력 -> X
+            // 10 X 5 = 50
+
+            Console.WriteLine("==========================");
+            Console.WriteLine("간단한 계산기 프로그램 v1.0");
+            Console.WriteLine("==========================");
+
+            
+
+            Console.WriteLine("숫자 1 입력 : ");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("숫자 2 입력 : ");
+            int num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("연산자 입력(+, -, X, /) : ");
+;           char c = char.Parse(Console.ReadLine());
+
+            switch (c)
+            {
+                case '+':
+                    Console.WriteLine(num1 + " + " + num2 + " = " + (num1 + num2));
+                    break;
+                case '-':
+                    Console.WriteLine(num1 + " - " + num2 + " = " + (num1 - num2));
+                    break;
+                case 'x':
+                    Console.WriteLine(num1 + " x " + num2 + " = " + (num1 * num2));
+                    break;
+                case '/':
+                    Console.WriteLine(num1 + " / " + num2 + " = " + (num1 / num2));
+                    break;
+            }
+
+
+        }
+
+        public void Swtich_Practice2()
+        {
+            // 3. 자판기에서 담배를 선택하여 출력하는 프로그램
+            // 조건1) 자판기에 입력한 금액에 대한 거스름돈 처리 필요
+
+            // ========================
+            // 담배 자판기 프로그램 v1.0
+            // ========================
+
+            // 원하는 담배를 메뉴에서 선택하세요
+            // 1. 에쎄 골든 리프 : 6000원
+            // 2. 에쎄 스페셜 골드 : 5000원
+            // 3. 더원 블루 : 4500원
+            // 4. 더원 오렌지 : 4500원
+            // 5. 더원 화이트 : 4500원
+
+            // 담배를 선택하세요 -> 5
+            // 더원 화이트를 선택하셨습니다 
+
+            // 담배 금액을 입금하세요 -> 10000
+            // 더원 화이트를 구매했습니다 거스름돈 5500원을 받으세요 
+
+            Console.WriteLine("========================");
+            Console.WriteLine("담배 자판기 프로그램 v1.0");
+            Console.WriteLine("========================");
+
+            Console.WriteLine("원하는 담배를 메뉴에서 선택하세요");
+            Console.WriteLine("1. 에쎄 골든 리프 : 6000원");
+            Console.WriteLine("2. 에셰 스페셜 골드 : 5000원");
+            Console.WriteLine("3. 더원 블루 : 4500원");
+            Console.WriteLine("4. 더원 오렌지 : 4500원");
+            Console.WriteLine("5. 더원 화이트 : 4500원");
+
+            Console.WriteLine("담배를 선택하세요 ");
+            int a = int.Parse(Console.ReadLine());
+            int b = 6000;
+            int c = 5000;
+            int d = 4500;
+            int e = 4500;
+            int f = 4500;
+
+            switch (a)
+            {
+                case 1:
+                    Console.WriteLine("에쎄 골든 리프를 선택하셨습니다");
+                    break;
+                case 2:
+                    Console.WriteLine("에쎄 스페셜 골드를 선택하셨습니다");
+                    break;
+                case 3:
+                    Console.WriteLine("더원 블루를 선택하셨습니다");
+                    break;
+                case 4:
+                    Console.WriteLine("더원 오렌지를 선택하셨습니다");
+                    break;
+                case 5:
+                    Console.WriteLine("더원 화이트를 선택하셨습니다");
+                    break;
+            }
+
+            if (a == 1)
+            {
+                Console.WriteLine("담배 금액을 입금하세요");
+                int g = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("에쎄 골든 리프의 가격은 {0}원 이었고, 거스름돈은 {1} 입니다", b, (g - b));
+            }
+
+            if (a == 2)
+            {
+                Console.WriteLine("담배 금액을 입금하세요");
+                int g = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("에쎄 스페셜 골드의 가격은 {0}원 이었고, 거스름돈은 {1} 입니다", c, (g - c));
+            }
+
+            if (a == 3)
+            {
+                Console.WriteLine("담배 금액을 입금하세요");
+                int g = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("더원 블루의 가격은 {0}원 이었고, 거스름돈은 {1} 입니다", d, (g - d));
+            }
+
+            if (a == 4)
+            {
+                Console.WriteLine("담배 금액을 입금하세요");
+                int g = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("더원 오렌지의 가격은 {0}원 이었고, 거스름돈은 {1} 입니다", e, (g - e));
+            }
+
+            if (a == 5)
+            {
+                Console.WriteLine("담배 금액을 입금하세요");
+                int g = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("더원 화이트의 가격은 {0}원 이었고, 거스름돈은 {1} 입니다", f, (g - f));
+            }
+        }
+    }
+}
