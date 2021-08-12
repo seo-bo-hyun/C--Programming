@@ -1,0 +1,100 @@
+public void Swtich_Practice2()
+        {
+            // 3. 자판기에서 담배를 선택하여 출력하는 프로그램
+            // 조건1) 자판기에 입력한 금액에 대한 거스름돈 처리 필요
+
+            // ========================
+            // 담배 자판기 프로그램 v1.0
+            // ========================
+
+            // 원하는 담배를 메뉴에서 선택하세요
+            // 1. 에쎄 골든 리프 : 6000원
+            // 2. 에쎄 스페셜 골드 : 5000원
+            // 3. 더원 블루 : 4500원
+            // 4. 더원 오렌지 : 4500원
+            // 5. 더원 화이트 : 4500원
+
+            // 담배를 선택하세요 -> 5
+            // 더원 화이트를 선택하셨습니다 
+
+            // 담배 금액을 입금하세요 -> 10000
+            // 더원 화이트를 구매했습니다 거스름돈 5500원을 받으세요 
+
+            Console.WriteLine("========================");
+            Console.WriteLine("담배 자판기 프로그램 v1.0");
+            Console.WriteLine("========================");
+
+            Console.WriteLine("원하는 담배를 메뉴에서 선택하세요");
+            Console.WriteLine("1. 에쎄 골든 리프 : 6000원");
+            Console.WriteLine("2. 에셰 스페셜 골드 : 5000원");
+            Console.WriteLine("3. 더원 블루 : 4500원");
+            Console.WriteLine("4. 더원 오렌지 : 4500원");
+            Console.WriteLine("5. 더원 화이트 : 4500원");
+
+            Console.WriteLine("담배를 선택하세요 ");
+            int a = int.Parse(Console.ReadLine());
+            int b = 6000;
+            int c = 5000;
+            int d = 4500;
+            int e = 4500;
+            int f = 4500;
+
+            switch (a)
+            {
+                case 1:
+                    Console.WriteLine("에쎄 골든 리프를 선택하셨습니다");
+                    break;
+                case 2:
+                    Console.WriteLine("에쎄 스페셜 골드를 선택하셨습니다");
+                    break;
+                case 3:
+                    Console.WriteLine("더원 블루를 선택하셨습니다");
+                    break;
+                case 4:
+                    Console.WriteLine("더원 오렌지를 선택하셨습니다");
+                    break;
+                case 5:
+                    Console.WriteLine("더원 화이트를 선택하셨습니다");
+                    break;
+            }
+
+            if (a == 1)
+            {
+                Console.WriteLine("담배 금액을 입금하세요");
+                int g = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("에쎄 골든 리프의 가격은 {0}원 이었고, 거스름돈은 {1} 입니다", b, (g - b));
+            }
+
+            if (a == 2)
+            {
+                Console.WriteLine("담배 금액을 입금하세요");
+                int g = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("에쎄 스페셜 골드의 가격은 {0}원 이었고, 거스름돈은 {1} 입니다", c, (g - c));
+            }
+
+            if (a == 3)
+            {
+                Console.WriteLine("담배 금액을 입금하세요");
+                int g = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("더원 블루의 가격은 {0}원 이었고, 거스름돈은 {1} 입니다", d, (g - d));
+            }
+
+            if (a == 4)
+            {
+                Console.WriteLine("담배 금액을 입금하세요");
+                int g = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("더원 오렌지의 가격은 {0}원 이었고, 거스름돈은 {1} 입니다", e, (g - e));
+            }
+
+            if (a == 5)
+            {
+                Console.WriteLine("담배 금액을 입금하세요");
+                int g = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("더원 화이트의 가격은 {0}원 이었고, 거스름돈은 {1} 입니다", f, (g - f));
+            }
+        }
